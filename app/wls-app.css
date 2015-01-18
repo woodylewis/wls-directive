@@ -1,0 +1,25 @@
+/* app css stylesheet */
+
+.nav, .wls-container a { cursor: pointer; }
+
+body {
+    text-align: center;
+    padding: 5em;
+}
+
+.wls-container {
+	width:80%;
+	height:20%;
+ 	border:1px solid blue;
+ 	margin:2em;
+ 	padding:1em;
+  	background-color: white;
+}
+
+.wls-chart {
+  font: 16px sans-serif;
+  text-align: right;
+  padding: 3px;
+  margin: 1em;
+  color: blue;
+}
