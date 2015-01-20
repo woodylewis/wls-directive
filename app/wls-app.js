@@ -7,20 +7,21 @@ angular.module('wlsApp', [
 	'ui.bootstrap.tpls'
 ])
 .controller('wlsController', ['$scope', function($scope) {
-	$scope.alpha = { one: [4, 8, 15, 16, 23, 42], two: 'Alpha Value' };
+	$scope.alpha = { range: [4, 8, 15, 42, 23, 16 ], two: 'Data Set 1' };
+	$scope.beta = { range: [8, 3, 19, 16, 7, 26 ], two: 'Data Set 2' };
 }])
-.directive('wlsChart1', function() {
+.directive('wlsBarchart1', function() {
 	return {
 		restrict: 'E',
 		scope: {
-			handle:'=',
+			handle1:'=',
 		},
 		templateUrl: 'templates/wls-chart1.html',
 
 		link: function($scope, element, attrs) {
-			var data = $scope.handle.one;
+			var data = $scope.handle1.range;
 			
-			var width = 500,
+			var width = 420,
 			    barHeight = 20;
 
 			var x = d3.scale.linear()
@@ -41,7 +42,46 @@ angular.module('wlsApp', [
 			    .attr("height", barHeight - 1);
 
 			bar.append("text")
-			    .attr("x", function(d) { return x(d) - 3; })
+			    .attr("x", function(d) { return x(d) - 16; })
+			    .attr("y", barHeight / 2)
+			    .attr("dy", ".35em")
+			    .text(function(d) { return d; });
+		}
+	};
+})
+.directive('wlsBarchart2', function() {
+	return { 
+		restrict: 'E',
+		scope: {
+			handle2:'=',
+		},
+		templateUrl: 'templates/wls-chart2.html',
+
+		link: function($scope, element, attrs) {
+			var data = $scope.handle2.range;
+			
+			var width = 420,
+			    barHeight = 20;
+
+			var x = d3.scale.linear()
+			    .domain([0, d3.max(data)])
+			    .range([0, width]);
+
+			var chart = d3.select(".wls-chart2")
+			    .attr("width", width)
+			    .attr("height", barHeight * data.length);
+
+			var bar = chart.selectAll("g")
+			    .data(data)
+			  .enter().append("g")
+			    .attr("transform", function(d, i) { return "translate(0," + i * barHeight + ")"; });
+
+			bar.append("rect")
+			    .attr("width", x)
+			    .attr("height", barHeight - 1);
+
+			bar.append("text")
+			    .attr("x", function(d) { return x(d) - 16; })
 			    .attr("y", barHeight / 2)
 			    .attr("dy", ".35em")
 			    .text(function(d) { return d; });

@@ -1,28 +1,27 @@
 0 info it worked if it ends with ok
-1 verbose cli [ 'node', '/usr/local/bin/npm', 'start' ]
-2 info using npm@1.1.65
-3 info using node@v0.8.14
-4 verbose read json /Users/woody/ng/wls-directive/package.json
-5 verbose run-script [ 'prestart', 'start', 'poststart' ]
-6 info prestart wlsApp@0.0.0
-7 verbose unsafe-perm in lifecycle true
-8 silly exec sh "-c" "npm install"
-9 silly sh,-c,npm install,/Users/woody/ng/wls-directive spawning
-10 info wlsApp@0.0.0 Failed to exec prestart script
-11 error wlsApp@0.0.0 prestart: `npm install`
-11 error `sh "-c" "npm install"` failed with 1
-12 error Failed at the wlsApp@0.0.0 prestart script.
-12 error This is most likely a problem with the wlsApp package,
-12 error not with npm itself.
-12 error Tell the author that this fails on your system:
-12 error     npm install
-12 error You can get their info via:
-12 error     npm owner ls wlsApp
-12 error There is likely additional logging output above.
-13 error System Darwin 13.4.0
-14 error command "node" "/usr/local/bin/npm" "start"
-15 error cwd /Users/woody/ng/wls-directive
-16 error node -v v0.8.14
-17 error npm -v 1.1.65
-18 error code ELIFECYCLE
-19 verbose exit [ 1, true ]
+1 verbose cli [ '/usr/bin/node', '/usr/bin/npm', 'start' ]
+2 info using npm@1.4.28
+3 info using node@v0.10.33
+4 verbose run-script [ 'prestart', 'start', 'poststart' ]
+5 info prestart wlsApp@0.0.0
+6 verbose unsafe-perm in lifecycle true
+7 info start wlsApp@0.0.0
+8 verbose unsafe-perm in lifecycle true
+9 info wlsApp@0.0.0 Failed to exec start script
+10 error wlsApp@0.0.0 start: `http-server -p 8000 -c-1`
+10 error Exit status 8
+11 error Failed at the wlsApp@0.0.0 start script.
+11 error This is most likely a problem with the wlsApp package,
+11 error not with npm itself.
+11 error Tell the author that this fails on your system:
+11 error     http-server -p 8000 -c-1
+11 error You can get their info via:
+11 error     npm owner ls wlsApp
+11 error There is likely additional logging output above.
+12 error System Linux 2.6.32-504.3.3.el6.x86_64
+13 error command "/usr/bin/node" "/usr/bin/npm" "start"
+14 error cwd /mnt/hgfs/ng/wls-directive
+15 error node -v v0.10.33
+16 error npm -v 1.4.28
+17 error code ELIFECYCLE
+18 verbose exit [ 1, true ]
