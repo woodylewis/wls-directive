@@ -49,7 +49,7 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12 text-center">
-                <h3>wlsApp</h3>
+                <h3>AngularJS - Directive</h3>
                     <p>
             </div>
         </div>
@@ -59,6 +59,10 @@
     <!-- /.container -->
 
   <div ng-cloak ng-controller="wlsController">
+    <div class="wls-copy">
+      This app uses custom directives to generate two bar charts using functions from the D3 JavaScript library. Scope data is passed from the parent controller using the defined markup elements. 
+      <p><br><a href="https://github.com/woodylewis/wls-directive" target="_blank">GitHub Repo</a>
+    </div>
     <wls-barchart1 handle1= "alpha"></wls-barchart1>
     <wls-barchart2 handle2= "beta"></wls-barchart2>
   </div>
