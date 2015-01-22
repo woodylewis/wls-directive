@@ -8,6 +8,7 @@ To do: replace with D3 service.
 ```
 bower install angular-bootstrap
 ```
+```
 bower install angular-ui-router
 ```
 ```
