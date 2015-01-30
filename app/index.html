@@ -72,19 +72,18 @@
 
   <div ng-cloak ng-controller="wlsController">
     <div class="wls-copy">
-      This app uses custom directives to generate two bar charts using functions from the D3 JavaScript library. Scope data is passed from the parent controller using the defined markup elements. 
+      This app uses a custom directive to generate two bar charts, creating a D3 service and injecting it into the parent controller, which in turn injects it into the directive's link function. Data ranges are passed from the parent controller as arguments to the directive. 
       <p><br><a href="https://github.com/woodylewis/wls-directive" target="_blank">GitHub Repo</a>
     </div>
-    <wls-barchart1 handle1= "alpha"></wls-barchart1>
-    <wls-barchart2 handle2= "beta"></wls-barchart2>
+    <wls-barchart1 handle1= "alpha" handle2= "beta"></wls-barchart1>
   </div>
 
   <script src="bower_components/angular/angular.js"></script>
   <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
   <script src="bower_components/angular-bootstrap/ui-bootstrap.js"></script>
   <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
-  <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
   <script src="wls-app.js"></script>
+  <script src="d3.js"></script>
 </body>
 </html> 
  

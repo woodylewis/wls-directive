@@ -9,18 +9,19 @@ body {
 
 .wls-container {
 	width:80%;
+  /*
 	height:20%;
- 	border:1px solid blue;
+  */
  	margin:2em;
  	padding:1em;
   background-color: white;
 }
 
-.wls-chart rect {
+.wls-chart1 rect {
   fill: steelblue;
 }
 
-.wls-chart text {
+.wls-chart1 text {
   fill: white;
   font:10px sans-serif;
 }
