@@ -14,8 +14,8 @@ angular.module('wlsApp', [
 	return {
 		restrict: 'E',
 		scope: {
-			handle1:'=',
-			handle2:'=',
+			alpha:'=',
+			beta:'='
 		},
 		templateUrl: 'templates/wls-chart1.html',
 
@@ -46,9 +46,9 @@ angular.module('wlsApp', [
 				    .attr("dy", ".35em")
 				    .text(function(d) { return d; });
 			}
-
-			barChart($scope.handle1.range, ".wls-chart1", 420, 20);			
-			barChart($scope.handle2.range, ".wls-chart2", 420, 20);
+			
+			barChart($scope.alpha.range, ".wls-chart1", 420, 20);			
+			barChart($scope.beta.range, ".wls-chart2", 420, 20);
 			});
 		}
 	};

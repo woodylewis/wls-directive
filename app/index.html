@@ -75,7 +75,10 @@
       This app uses a custom directive to generate two bar charts, creating a D3 service and injecting it into the parent controller, which in turn injects it into the directive's link function. Data ranges are passed from the parent controller as arguments to the directive. 
       <p><br><a href="https://github.com/woodylewis/wls-directive" target="_blank">GitHub Repo</a>
     </div>
-    <wls-barchart1 handle1= "alpha" handle2= "beta"></wls-barchart1>
+    <!-- 
+    <wls-barchart1></wls-barchart1>
+  -->
+    <wls-barchart1 alpha="alpha" beta="beta"></wls-barchart1>
   </div>
 
   <script src="bower_components/angular/angular.js"></script>
