@@ -1,8 +1,6 @@
 #wls-directive
 
-This app creates two directives to generate D3 bar charts from scope variables.
-To do: correct SVG border box glitch. Create a D3 service.
-
+This app uses a custom directive to generate two bar charts, creating a D3 service and injecting it into the parent controller, which in turn injects it into the directive's link function. Data ranges are passed from the parent controller as arguments to the directive.
 ```
 bower install angular-bootstrap
 ```
